@@ -30,7 +30,6 @@ def insert_data_to_sqlite(nome,cognome,eta):
     #conn= sqlite3.connect("test.db")
     df = pd.DataFrame([[nome,cognome,eta]],columns=["nome","cognome","eta"])
     df.to_sql("my_table",conn,if_exists="append",index=False)
-    print(df)
     conn.commit()
     conn.close()
 def visualizza_data():
